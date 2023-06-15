@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin center-all() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin colorlett() {
+    background-image: linear-gradient(90deg,#03a9f4,#f441a5,#03a9f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
