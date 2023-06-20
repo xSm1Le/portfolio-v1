@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/839091a26f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Maven+Pro:wght@400;800&family=Zilla+Slab:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/sass/main.css" />
     <title>Basti Portfolio</title>
   </head>
@@ -17,9 +21,9 @@
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Contact Me</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="mailto:Bastian.Meese@web.de">Contact Me</a></li>
           </ul>
         </nav>
       </section>
@@ -47,9 +51,12 @@
               </p>
             </div>
           </section>
-      <section class="sec2">
-        <div>
-          <img src="src/img/Bastian.jpg" alt="Ein Bild von mir" width="300px"/>
+          <section class="scrollarrow">
+            <h2>Scroll down <i class="fa-solid fa-arrow-down fa-beat" style="color: #ac24eb;"></i> </h2>
+          </section>
+      <section class="sec2" id="aboutme">
+        <div class="pcscale">
+          <img src="./src/img/Bastian.jpg" alt="Ein Bild von mir" width="300px"/>
         </div>
         <div class="flexabme">
           <div>
@@ -68,11 +75,11 @@
             </p>
           </div>
           <div>
-            <p class="mybutton"><a href="#">Talk to me!</a> </p>
+            <p class="mybutton"><a href="mailto:Bastian.Meese@web.de">Talk to me!</a> </p>
           </div>
         </div>
     </section>
-    <section class="skillchecked">
+    <section class="skillchecked" id="skills">
         <div class="skills">
             <h4 class="animate-char">My Skills</h4>
             <p> This is completly based on personal evaluation </p>
@@ -115,20 +122,9 @@
                 </div>
             </div>
         </div>
-        </section>
-        <section class="flex123">
-            <div class="sec3">
-                <div class="centerp">
-                    If I have piqued your interest and you want me to work with you on a project or you have any other questions then feel free to contact me by mail with a click on this button!
-                </p>
-                <button>
-                    Contact me!
-                </button>
-            </div>
-        </section>
+      </section>
     </main>
     <footer>
-
     </footer>
   </body>
 </html>

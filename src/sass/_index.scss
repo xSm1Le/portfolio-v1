@@ -1,10 +1,4 @@
 body {
-  background-image: url(../img/marshmellow\ desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-  width: 100%;
-  height: 80vh;
   background-color: #111111;
 }
 
@@ -56,6 +50,8 @@ header {
     border-bottom: 4px solid #f441a5;
     border-radius: 5px;
   }
+
+  
 
   button {
     text-decoration: none;
@@ -121,12 +117,28 @@ button:active {
 }
 
 main {
+  background-image: url(../img/marshmellow\ desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top;
+
+  h2 {
+    color: white;
+  }
+
+  .scrollarrow {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    margin-left: -30%;
+  }
+
   .sec1 {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin-left: 10%;
-    margin-top: 25vh;
+    margin-top: 20vh;
   }
 
   .p1 {
@@ -164,7 +176,7 @@ main {
     background-size: 200% auto;
     color: #fff;
     background-clip: text;
-    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 4s linear infinite;
@@ -208,7 +220,7 @@ main {
     align-items: center;
     flex-direction: column;
     margin: 0rem 4rem;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .abtmetext {
@@ -354,7 +366,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
   width: 90%;
   margin: auto;
 
@@ -366,6 +377,19 @@ main {
 
 .skillcards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pcscale:hover img {
+  transform: scale(1.2);
+  transition: 300ms;
+}
+
+h2:hover {
+  transform: scale(1.2);
+  transition: 500ms;
 }
 
 .skills {
@@ -374,84 +398,52 @@ main {
   margin-bottom: 2rem;
 }
 
-.flex123 {
-  @include center-all ();
+footer {
+  height: 25vh;
 }
 
-.sec3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  width: 50%;
-  height: 30vh;
 
-  button {
-    text-decoration: none;
-    position: relative;
-    border: none;
-    left: 10rem;
-    top: 1rem;
-    font-size: 14px;
-    font-family: inherit;
-    color: #fff;
-    width: 7em;
-    height: 2em;
-    line-height: 2em;
-    text-align: center;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    background-size: 300%;
-    border-radius: 30px;
-    z-index: 1;
-  }
-
-  button a {
-    text-decoration: none;
-    color: white;
-    font-weight: 800;
-  }
-
-  button:hover {
-    animation: ani 8s linear infinite;
-    border: none;
-  }
-
-  @keyframes ani {
-    0% {
-      background-position: 0%;
+@media screen and (max-width: 786px) {
+    header li  {
+      display: none;
     }
 
-    100% {
-      background-position: 400%;
+    header button {
+      right: 1.5rem;
     }
-  }
+
+    main .sec1 {
+      width: 80%;
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+    }
+
+    .sec2 img {
+      width: 200px;
+      margin-bottom: 2rem;
+    }
+
+    .sec2 {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 10vh 0;
+    }
+
+    .skills {
+
+    }
+
+    main .scrollarrow {
+      margin-top: 70%;
+    }
 }
 
-button:before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
-  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-  background-size: 400%;
-  border-radius: 35px;
-  transition: 1s;
-}
+@media screen and (max-width: 900px) {
+    header li {
+      display: none;
+    }
 
-button:hover::before {
-  filter: blur(10px);
-}
-
-button:active {
-  background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-}
-
-.centerp {
-  text-align: start;
-  width: 50%;
-  font-size: 1.2rem;
+    .colorfull {
+      font-size: 1.7rem;
+    }
 }
